@@ -351,6 +351,7 @@ input[type="checkbox"]#all:checked
 	width: 75%;
 	margin-top: 5vh;
 }
+
 .filter__list {
 	list-style-type: none;
 	margin: 0;
