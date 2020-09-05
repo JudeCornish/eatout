@@ -1,0 +1,254 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Kumbh Sans", sans-serif;
+	line-height: 1.6;
+}
+
+h2 {
+	font-size: 200%;
+}
+
+h3 {
+	font-size: 110%;
+	color: rgb(106, 106, 106);
+}
+
+a {
+	text-decoration: none;
+}
+
+header {
+	background-color: rgb(0, 0, 108);
+	color: white;
+	height: 6vh;
+	line-height: 6vh;
+}
+
+nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.logo {
+	height: 6vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.logo img {
+	height: 50%;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+	outline: none;
+}
+
+.wrapper {
+	width: 90%;
+	max-width: 1080px;
+	margin: 0 auto;
+}
+
+.restaurant-box {
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+	width: 100%;
+	display: flex;
+	background-color: rgb(244, 244, 244);
+	border-radius: 5px;
+}
+
+@media screen and (min-width: 700px) {
+	.restaurant-box {
+		height: 35vh;
+	}
+	.restaurant-box img {
+		max-width: 380px;
+	}
+	.restaurant-box .box-img {
+		width: 40%;
+	}
+	.restaurant-box .box-desc {
+		width: 60%;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.restaurant-box {
+		display: flex;
+		flex-direction: column;
+		height: none;
+	}
+}
+
+.restaurant-box h2 {
+	margin-top: 1vh;
+}
+
+.restaurant-box .restaurant-tags {
+	margin-top: 1vh;
+	margin-left: 20px;
+}
+
+.restaurant-box .restaurant-tags {
+	display: inline-block;
+}
+
+.restaurant-box .restaurant-tags li {
+	display: list-item;
+	color: rgb(0, 166, 255);
+	padding-right: 26px;
+	list-style-type: circle;
+	float: left;
+}
+
+.restaurant-box .restaurant-tags li:first-child {
+	list-style: none;
+	margin-left: -20px;
+}
+
+.box-desc {
+	font-weight: 100;
+	font-size: 100%;
+	height: 100%;
+	padding: 3vh;
+}
+
+.restaurant-box img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-top-right-radius: 0px;
+	border-top-left-radius: 5px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 5px;
+}
+
+.restaurant-listings {
+	width: 70%;
+}
+
+.restaurant-listings input {
+	font-family: "Kumbh Sans", sans-serif;
+	width: 100%;
+	padding: 12px 24px;
+	background-color: transparent;
+	transition: transform 250ms ease-in-out;
+	color: #575756;
+	background-color: rgb(237, 237, 237);
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-size: 18px 18px;
+	background-position: 95% center;
+	border-radius: 5px;
+	transition: all 250ms ease-in-out;
+	backface-visibility: hidden;
+	transform-style: preserve-3d;
+	border: none;
+}
+
+.more-info {
+	padding: 8px 20px 8px 20px;
+	border: none;
+	background-color: rgb(0, 166, 255);
+	color: white;
+	border-radius: 2px;
+	font-family: "Kumbh Sans", sans-serif;
+	margin-top: 2vh;
+	cursor: pointer;
+}
+
+.listings-container {
+	display: flex;
+	margin-top: 5vh;
+}
+
+.filter-sidebar {
+	width: 28%;
+}
+
+.filter-sidebar h2 {
+	text-transform: uppercase;
+}
+
+.location-dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.location-dropdown-content {
+	display: none;
+	position: absolute;
+	min-width: 160px;
+	z-index: 1;
+	background-color: white;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	border-bottom-right-radius: 5px;
+	width: 100%;
+	opacity: 0;
+	transition: all 0.5s ease;
+}
+
+.location-dropdown-content p {
+	margin-top: 10px;
+}
+
+.location-dropdown-content a {
+	color: rgb(58, 58, 58);
+	transition: all 0.15s ease;
+}
+
+.location-dropdown-content a:hover {
+	color: rgb(108, 108, 108);
+	transition: all 0.15s ease;
+}
+
+.location-dropdown:hover .location-dropdown-content {
+	display: block;
+	opacity: 1;
+	transition: all 0.5s ease;
+}
+
+.dropdown-icon {
+	position: absolute;
+	padding-top: 8px;
+	padding-left: 8px;
+	font-size: 80%;
+}
+
+@media screen and (max-width: 700px) {
+	.listings-container {
+		flex-direction: column;
+	}
+
+	.filter-sidebar {
+		margin-bottom: 3vh;
+		width: 100%;
+	}
+
+	.location-dropdown {
+		width: 100%;
+	}
+
+	.restaurant-listings {
+		width: 100%;
+	}
+
+	.box-desc {
+		padding-top: 0vh;
+	}
+}
+
+.hidden {
+	display: none;
+}
