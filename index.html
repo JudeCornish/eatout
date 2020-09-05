@@ -23,84 +23,172 @@
 			</div>
 		</header>
 		<div class="wrapper">
-			<div class="listings-container">
-				<div class="filter-sidebar">
-					<h3>Eating out in...</h3>
-					<div class="location-dropdown">
-						<h2>
-							<span
-								>LONDON
-								<ion-icon
-									class="dropdown-icon"
-									name="chevron-down-outline"
-								></ion-icon>
-							</span>
-						</h2>
-						<div class="location-dropdown-content">
-							<a href="locations/guildford.html"><p>GUILDFORD</p></a>
-							<a href="locations/manchester.html"><p>MANCHESTER</p></a>
-							<a href="locations/luton.html"><p>LUTON</p></a>
+			<div class="filters">
+				<div class="filter">
+					<input id="all" type="checkbox" />
+					<input id="takeaway" type="checkbox" />
+
+					<div class="filter__control">
+						<div class="location-dropdown">
+							<h3>Eating out in...</h3>
+							<h2>
+								<span
+									>LONDON
+									<ion-icon
+										class="dropdown-icon"
+										name="chevron-down-outline"
+									></ion-icon>
+								</span>
+							</h2>
+							<div class="location-dropdown-content">
+								<a href="locations/guildford.html"><p>GUILDFORD</p></a>
+								<a href="locations/manchester.html"><p>MANCHESTER</p></a>
+								<a href="locations/luton.html"><p>LUTON</p></a>
+							</div>
 						</div>
+						<label class="filter__button" for="takeaway">Take away</label>
 					</div>
-				</div>
-				<div class="restaurant-listings">
-					<input type="text" id="filter" placeholder="Search" />
-					<ul id="list">
-						<div class="restaurant-box">
-							<div class="box-img">
-								<img src="resources/img/restaurants/nandos.png" alt="" />
-							</div>
-							<div class="box-desc">
-								<h2>Nandos</h2>
-								<div class="restaurant-box-desc">
-									<ul class="restaurant-tags">
-										<li>Chicken</li>
-										<li>Take away</li>
-										<li>50% off</li>
-									</ul>
-									<p>Knightsbridge</p>
-									<p>020 7201 8676</p>
-									<button class="more-info">Visit website</button>
+
+					<div class="filter__content">
+						<input type="text" id="filter" placeholder="Search" />
+
+						<ul id="list" class="filter__list">
+							<li class="filter__item" data-filter="red takeaway">
+								<div class="restaurant-box">
+									<div class="box-img">
+										<img src="resources/img/restaurants/nandos.png" alt="" />
+									</div>
+									<div class="box-desc">
+										<h2>Nandos</h2>
+										<div class="restaurant-box-desc">
+											<ul class="restaurant-tags">
+												<li>Chicken</li>
+												<li>Take away</li>
+												<li>50% off</li>
+											</ul>
+											<div class="restaurant-ctas">
+												<div class="more-info">
+													<a>Visit website</a>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-						<div class="restaurant-box">
-							<div class="box-img">
-								<img src="resources/img/restaurants/pizza-express.jpg" alt="" />
-							</div>
-							<div class="box-desc">
-								<h2>Pizza Express</h2>
-								<div class="restaurant-box-desc">
-									<ul class="restaurant-tags">
-										<li>Pizza</li>
-										<li>Take away</li>
-										<li>50% off</li>
-									</ul>
-									<p>Somewhere in London</p>
-									<p>020 7201 8676</p>
-									<button class="more-info">Visit website</button>
+							</li>
+							<li class="filter__item" data-filter="">
+								<div class="restaurant-box">
+									<div class="box-img">
+										<img
+											src="resources/img/restaurants/pizza-express.jpg"
+											alt=""
+										/>
+									</div>
+									<div class="box-desc">
+										<h2>Pizza Express</h2>
+										<div class="restaurant-box-desc">
+											<ul class="restaurant-tags">
+												<li>Pizza</li>
+												<li>50% off</li>
+											</ul>
+											<div class="restaurant-ctas">
+												<div class="more-info">
+													<a>Visit website</a>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-						<div class="restaurant-box">
-							<div class="box-img">
-								<img src="resources/img/restaurants/kfc.png" alt="" />
-							</div>
-							<div class="box-desc">
-								<h2>KFC</h2>
-								<div class="restaurant-box-desc">
-									<ul class="restaurant-tags">
-										<li>Chicken</li>
-										<li>Take away</li>
-										<li>50% off</li>
-									</ul>
-									<p>Luton</p>
-									<p>020 7201 8676</p>
-									<button class="more-info">Visit website</button>
+							</li>
+							<li class="filter__item" data-filter="">
+								<div class="restaurant-box">
+									<div class="box-img">
+										<img src="resources/img/restaurants/kfc.png" alt="" />
+									</div>
+									<div class="box-desc">
+										<h2>KFC</h2>
+										<div class="restaurant-box-desc">
+											<ul class="restaurant-tags">
+												<li>Chicken</li>
+												<li>50% off</li>
+											</ul>
+											<div class="restaurant-ctas">
+												<div class="more-info">
+													<a>Visit website</a>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
-							</div>
-						</div>
-					</ul>
+							</li>
+							<li class="filter__item" data-filter="red takeaway">
+								<div class="restaurant-box">
+									<div class="box-img">
+										<img src="resources/img/restaurants/nandos.png" alt="" />
+									</div>
+									<div class="box-desc">
+										<h2>Nandos</h2>
+										<div class="restaurant-box-desc">
+											<ul class="restaurant-tags">
+												<li>Chicken</li>
+												<li>Take away</li>
+												<li>50% off</li>
+											</ul>
+											<div class="restaurant-ctas">
+												<div class="more-info">
+													<a>Visit website</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="filter__item" data-filter="">
+								<div class="restaurant-box">
+									<div class="box-img">
+										<img
+											src="resources/img/restaurants/pizza-express.jpg"
+											alt=""
+										/>
+									</div>
+									<div class="box-desc">
+										<h2>Pizza Express</h2>
+										<div class="restaurant-box-desc">
+											<ul class="restaurant-tags">
+												<li>Pizza</li>
+												<li>50% off</li>
+											</ul>
+											<div class="restaurant-ctas">
+												<div class="more-info">
+													<a>Visit website</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="filter__item" data-filter="">
+								<div class="restaurant-box">
+									<div class="box-img">
+										<img src="resources/img/restaurants/kfc.png" alt="" />
+									</div>
+									<div class="box-desc">
+										<h2>KFC</h2>
+										<div class="restaurant-box-desc">
+											<ul class="restaurant-tags">
+												<li>Chicken</li>
+												<li>50% off</li>
+											</ul>
+											<div class="restaurant-ctas">
+												<div class="more-info">
+													<a>Visit website</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -117,6 +205,7 @@
 				});
 			});
 		</script>
+		<script></script>
 		<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
 	</body>
 </html>
